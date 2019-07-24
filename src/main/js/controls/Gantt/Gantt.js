@@ -7,7 +7,10 @@ import errors from "../../helpers/errors";
 import { createLegend } from "../../helpers/legend";
 import styles from "../../helpers/styles";
 import utils from "../../helpers/utils";
-import { contentLoadHandler } from "../../helpers/loadUtil";
+import {
+    contentLoadHandler,
+    contentUnloadHandler
+} from "../../helpers/constructUtils";
 import GanttConfig, { processInput } from "./GanttConfig";
 import {
     prepareLegendEventHandlers,
@@ -294,7 +297,7 @@ class Gantt extends Construct {
      * @returns {Gantt} - Gantt instance
      */
     unloadContent(content) {
-        contentLoadHandler(content, (i) => {
+        contentUnloadHandler(content, (i) => {
             const index = this.tracks.indexOf(i.key);
             if (index < 0) {
                 throw new Error(errors.THROW_MSG_INVALID_OBJECT_PROVIDED);
