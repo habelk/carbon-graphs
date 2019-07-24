@@ -261,7 +261,7 @@ class Gantt extends Construct {
      * The content serves as a 1to1 relationship. For rendering
      * multiple data sets respective number of content needs to be provided.
      *
-     * @param {object|Array} content - Gantt content to be loaded.
+     * @param {object|Array} content - Gantt content to be loaded
      * @returns {Gantt} - Gantt instance
      */
     loadContent(content) {
@@ -290,7 +290,7 @@ class Gantt extends Construct {
      * The content serves as a 1to1 relationship. For rendering
      * multiple data sets respective number of content needs to be provided.
      *
-     * @param {object|Array} content - Gantt content to be removed.
+     * @param {object|Array} content - Gantt content to be removed
      * @returns {Gantt} - Gantt instance
      */
     unloadContent(content) {
